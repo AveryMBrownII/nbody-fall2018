@@ -1,7 +1,7 @@
 	
 
 /**
- * @author YOUR NAME THE STUDENT IN 201
+ * @author Avery Brown IN 2018
  * 
  * Simulation program for the NBody assignment
  */
@@ -23,11 +23,13 @@ public class NBody {
 	
 		// TODO: read values at beginning of file to
 		// find the radius
+		s.nextInt();
+		double x = s.nextDouble();
 		
 		s.close();
 		
 		// TODO: return radius read
-		return 0;	
+		return x;
 	}
 	
 	/**
