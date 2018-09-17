@@ -81,6 +81,27 @@ public class Body {
 		return forceY;
 	}
 	
+	public double calcNetForceExertedByX(Body[] bodies) {
+		double counter = 0.00;
+		for (Body b: bodies) {
+			if (!b.equals(this)) {
+				counter += calcForceExertedByX(b);	
+			}			
+		}
+		return counter;
+	}
+	
+	public double calcNetForceExertedByY(Body[] bodies) {
+		double counter = 0.00;
+		for (Body b: bodies) {
+			if (!b.equals(this)) {
+				counter += calcForceExertedByY(b);	
+			}			
+		}
+		return counter;	
+	}
+
+	
 	public void update(double deltaT, double xforce, double yforce) {
 		double ax = (xforce / myMass);
 		double ay = (yforce / myMass);
@@ -94,6 +115,9 @@ public class Body {
 		this.myYVel = nvy;
 	}
 	
+	public void draw () {
+		StdDraw.picture(myXPos, myYPos, "images/"+myFileName);	
+	}
 	
 	
 }
