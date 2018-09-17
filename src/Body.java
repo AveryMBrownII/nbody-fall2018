@@ -15,7 +15,6 @@ public class Body {
 		myYVel = yv;
 		myMass = mass;
 		myFileName = filename;
-		
 		}
 		
 	public double getX() {
@@ -94,5 +93,7 @@ public class Body {
 		this.myXVel = nvx;
 		this.myYVel = nvy;
 	}
+	
+	
 	
 }

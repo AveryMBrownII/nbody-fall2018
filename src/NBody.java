@@ -44,18 +44,23 @@ public class NBody {
 			Scanner s = new Scanner(new File(fname));
 			
 			// TODO: read # bodies, create array, ignore radius
-			int nb = 0; // # bodies to be read
+			
+			int nb = s.nextInt(); // # bodies to be read
+			s.nextDouble();
+			Body [] planetbods = new Body [nb];
 			
 			for(int k=0; k < nb; k++) {
-				
+
 				// TODO: read data for each body
 				// construct new body object and add to array
+				Body x = new Body(s.nextDouble(), s.nextDouble(), s.nextDouble(), s.nextDouble(), s.nextDouble(), s.next());
+				planetbods[k] = x;
 			}
 			
 			s.close();
 			
 			// TODO: return array of body objects read
-			return null;
+			return planetbods;
 	}
 	public static void main(String[] args) throws FileNotFoundException{
 		double totalTime = 157788000.0;
